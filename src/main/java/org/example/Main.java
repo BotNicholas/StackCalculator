@@ -14,13 +14,12 @@ public class Main {
         Calculator calculator = new Calculator();
 
         System.out.print("Enter here your arithmetical expression: ");
-        String expr = in.nextLine().replaceAll("\\s+", "");
+        String expr = in.nextLine();
+
         try {
-            Integer result = calculator.calculate(expr);
+            int result = calculator.calculate(expr);
             System.out.println("Result: " + result);
-        } catch (IncorrectExpressionException e) {
-            throw new RuntimeException(e);
-        } catch (DividedByZero e) {
+        } catch (IncorrectExpressionException | DividedByZero e) {
             throw new RuntimeException(e);
         }
     }
