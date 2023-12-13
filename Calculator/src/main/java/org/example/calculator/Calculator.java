@@ -78,7 +78,7 @@ public class Calculator {
                         result.append(","+tmp);
                         tmp=operations.pop();
                     }
-                    prevPr=0;
+                    prevPr= operations.empty() ? 0 : getPriority(operations.peek());
                 } else {
                     /**
                      * Special cases handler:

@@ -50,6 +50,7 @@ public class CalculatorTest {
                          Arguments.arguments("12-1-1+1+13*5-78+(1+23*4-56/2+2)+25-5+6", 91),
                          Arguments.arguments("10/(6-4)", 5),
                          Arguments.arguments("10/(6-4)/2", 2),
+                         Arguments.arguments("2+2*(2-2-5)+100", 92),
                          Arguments.arguments("10*(6-4)/2", 10));
     }
 
